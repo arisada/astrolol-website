@@ -1,0 +1,92 @@
+{
+  "html_lang": "en",
+
+  "meta": {
+    "title": "astrolol",
+    "description": "astrolol is a free, open-source, web-based platform for controlling your telescope, camera, mount and guiding from any browser.",
+    "og_description": "Free, open-source, web-based platform for controlling your telescope, camera, mount and guiding from any browser."
+  },
+
+  "nav": {
+    "features": "Features",
+    "plugins": "Plugins",
+    "screenshots": "Screenshots",
+    "get_started": "Get started",
+    "github": "GitHub"
+  },
+
+  "hero": {
+    "eyebrow": "Open source &middot; free &middot; web-based",
+    "title_html": "Run your telescope<br>from any browser.",
+    "lead": "astrolol is a headless control platform for your imaging rig. It runs on a small Linux computer and you drive it from a laptop, tablet or phone on your network.",
+    "cta_primary": "View on GitHub",
+    "cta_secondary": "Get started &rarr;"
+  },
+
+  "slides": {
+    "target":      { "label": "Target search",            "alt": "Target search page showing NGC 224, its altitude curve and transit time" },
+    "tasks":       { "label": "Sequencer task builder",    "alt": "Sequencer task builder with a multi-camera NGC 7023 plan" },
+    "platesolve":  { "label": "Plate solving",             "alt": "Plate solving page with a solved frame, mount offset and solver log" },
+    "polar_align": { "label": "Polar alignment",           "alt": "Polar alignment reticle and plate-solve wizard" },
+    "guider":      { "label": "Guiding",                   "alt": "Guide camera view with locked guide star and live RMS graph" },
+    "journal":     { "label": "Session journal",           "alt": "Sequencer journal showing a completed session's timeline and captured frames" }
+  },
+
+  "features": {
+    "eyebrow": "What it does",
+    "title": "Everything at the scope, in one place.",
+    "lead": "Device control, imaging, guiding and automation behind one event-driven backend, with a live view that stays in sync across every connected client.",
+    "cards": [
+      { "icon": "&#9881;",   "title": "Device control",         "body": "astrolol remembers the devices (INDI or native) that are part of your profile and reconnects them automatically." },
+      { "icon": "&#128247;", "title": "Parallel imaging",       "body": "Astrolol supports taking pictures from many cameras at once, with synchronized dithering." },
+      { "icon": "&#127919;", "title": "Guiding &amp; plate solving", "body": "Guiding with PHD2 or the integrated guider module." },
+      { "icon": "&#128203;", "title": "Sequencer",              "body": "Queue a night's plan: target, slew, center, guide, dither, meridian flip and recover from the usual incidents." },
+      { "icon": "&#128268;", "title": "REST API",               "body": "Every feature is reachable over a documented REST and WebSocket API, not just the bundled UI &mdash; the only free, open-source telescope control platform built this way. Script it, or build your own client." },
+      { "icon": "&#129513;", "title": "Plugins",                "body": "astrolol is completely designed over a plugin architecture, making it easy to extend it and implement new features or drivers." }
+    ]
+  },
+
+  "start": {
+    "eyebrow": "Get started",
+    "title": "Three things, then you're imaging.",
+    "steps": [
+      { "num": "01", "title": "Install it at the scope", "body": "Runs on a Raspberry Pi or any small Linux box bolted to the mount. 1GiB RAM recommended." },
+      { "num": "02", "title": "Connect your gear",       "body": "astrolol talks to INDI drivers out of the box, and has a native driver for Sky-Watcher EQMOD." },
+      { "num": "03", "title": "Open a browser",          "body": "Open astrolol from a browser or from your phone." }
+    ],
+    "install_note": "Setup depends on your hardware and OS.",
+    "install_cta": "Install instructions &rarr;"
+  },
+
+  "gallery": {
+    "eyebrow": "In the field",
+    "title": "What a session looks like.",
+    "lead": "Equipment control and your captures, wherever you check in from.",
+    "items": {
+      "mount":      { "alt": "Mount page showing live position, target coordinates and tracking controls",                     "caption": "Mount control, live position and tracking" },
+      "viewer":     { "alt": "Viewer page listing captured sessions and frames with thumbnails and file sizes",                 "caption": "Browse and manage every captured frame" },
+      "mobile":     { "alt": "astrolol's imaging page open in a phone browser, controlling an exposure",                       "caption": "Full control from your phone, no app required" },
+      "profiles":   { "alt": "Profiles page showing an equipment tree with mount, OTAs, filter wheel and cameras",              "caption": "Equipment profiles, your whole rig in a tree" },
+      "guider":     { "alt": "Guider page showing the guide camera view with a locked guide star and live RMS graph",           "caption": "Autoguiding with live RMS and star lock" },
+      "journal":    { "alt": "Sequencer journal showing a completed session's timeline and captured frames",                    "caption": "Session journal, every run's full history" },
+      "platesolve": { "alt": "Plate solving page with a solved frame, mount offset and solver log",                            "caption": "Plate solve, sync and re-slew in one step" },
+      "target":     { "alt": "Target search page showing NGC 224, its altitude curve and transit time",                        "caption": "Target search with rise, transit and set" },
+      "tasks":      { "alt": "Sequencer task builder with a multi-camera NGC 7023 plan",                                       "caption": "Build a multi-camera imaging plan" }
+    }
+  },
+
+  "plugins": {
+    "eyebrow": "Ecosystem",
+    "title": "Extend it yourself.",
+    "lead": "Every feature beyond the core device layer is a plugin &mdash; its own API, its own UI page, enabled per profile. These ship with astrolol today:"
+  },
+
+  "footer": {
+    "tagline": "open-source telescope control.",
+    "github": "GitHub",
+    "docs": "Docs",
+    "features": "Features"
+  },
+
+  "lightbox_close": "Close"
+}

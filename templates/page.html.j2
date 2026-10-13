@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="{{ html_lang }}">
+<head>
+<script>
+(function () {
+  var LANGS = {{ languages_json }};
+  var current = "{{ lang }}";
+  try {
+    if (document.referrer && new URL(document.referrer).origin === location.origin) return;
+  } catch (e) {}
+  var prefs = navigator.languages || [navigator.language || current];
+  for (var i = 0; i < prefs.length; i++) {
+    var code = String(prefs[i]).slice(0, 2).toLowerCase();
+    for (var j = 0; j < LANGS.length; j++) {
+      if (LANGS[j].code === code) {
+        if (LANGS[j].code !== current) { location.replace(LANGS[j].url); }
+        return;
+      }
+    }
+  }
+})();
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ meta.title }}</title>
+  <meta name="description" content="{{ meta.description }}">
+  <link rel="icon" href="/assets/logo-transparent.svg">
+{% for l in languages %}
+  <link rel="alternate" hreflang="{{ l.code }}" href="{{ site_url }}{{ l.url }}">
+{% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ site_url }}/">
+  <link rel="canonical" href="{{ site_url }}{{ current_path }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site_url }}{{ current_path }}">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ meta.og_description }}">
+  <meta property="og:image" content="{{ site_url }}/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ meta.title }}">
+  <meta name="twitter:description" content="{{ meta.og_description }}">
+  <meta name="twitter:image" content="{{ site_url }}/assets/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/astrolol-logo-banner-transparent.svg" alt="astrolol"></a>
+    <div class="navlinks">
+      <a href="#features">{{ nav.features }}</a>
+      <a href="#plugins">{{ nav.plugins }}</a>
+      <a href="#screenshots">{{ nav.screenshots }}</a>
+      <a href="#start">{{ nav.get_started }}</a>
+    </div>
+    <div class="lang-switch">
+{% for l in languages %}
+{% if l.code == lang %}
+      <span class="lang-current">{{ l.label }}</span>
+{% else %}
+      <a href="{{ l.url }}">{{ l.label }}</a>
+{% endif %}
+{% endfor %}
+    </div>
+    <a class="btn btn-ghost" href="{{ github_url }}">{{ nav.github }}</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <img class="hero-mark" src="/assets/astrolol-logo-banner-transparent.svg" alt="astrolol">
+      <span class="eyebrow">{{ hero.eyebrow }}</span>
+      <h1>{{ hero.title_html }}</h1>
+      <p class="lead">{{ hero.lead }}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{{ github_url }}">{{ hero.cta_primary }}</a>
+        <a class="btn btn-ghost" href="#start">{{ hero.cta_secondary }}</a>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="panel-title" id="slideLabel">{{ slides[0].label }}</span>
+      </div>
+      <div class="panel-body">
+        <div class="slideshow" id="slideshow">
+          <div class="slide-frame">
+{% for s in slides %}
+            <img class="slide" width="{{ s.w }}" height="{{ s.h }}" src="/{{ s.src }}" data-label="{{ s.label }}" alt="{{ s.alt }}">
+{% endfor %}
+          </div>
+          <div class="slide-dots" id="slideDots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">{{ features.eyebrow }}</span>
+      <h2>{{ features.title }}</h2>
+      <p>{{ features.lead }}</p>
+    </div>
+    <div class="feature-grid">
+{% for f in features.cards %}
+      <div class="feature">
+        <div class="icon">{{ f.icon }}</div>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.body }}</p>
+      </div>
+{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="start" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">{{ start.eyebrow }}</span>
+      <h2>{{ start.title }}</h2>
+    </div>
+    <div class="steps">
+{% for s in start.steps %}
+      <div class="step">
+        <span class="num">{{ s.num }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.body }}</p>
+      </div>
+{% endfor %}
+    </div>
+    <div class="install-box">
+      <span style="font-size:13.5px; color:var(--text-dim);">{{ start.install_note }}</span>
+      <a class="btn btn-primary" href="{{ github_install_url }}">{{ start.install_cta }}</a>
+    </div>
+  </div>
+</section>
+
+<section id="screenshots">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">{{ gallery.eyebrow }}</span>
+      <h2>{{ gallery.title }}</h2>
+      <p>{{ gallery.lead }}</p>
+    </div>
+    <div class="gallery">
+{% for g in gallery_items %}
+      <figure class="shot">
+        <div class="chrome"><span></span><span></span><span></span></div>
+        <div class="body"><img src="/{{ g.src }}" alt="{{ g.alt }}"></div>
+        <figcaption>{{ g.caption }}</figcaption>
+      </figure>
+{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="plugins" style="background:var(--surface); border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">{{ plugins.eyebrow }}</span>
+      <h2>{{ plugins.title }}</h2>
+      <p>{{ plugins.lead }}</p>
+    </div>
+    <div class="plugin-row">
+{% for chip in plugin_chips %}
+      <span class="chip">{{ chip }}</span>
+{% endfor %}
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>
+      <img src="/assets/astrolol-logo-banner-transparent.svg" alt="astrolol" class="foot-mark">
+      {{ footer.tagline }}
+    </p>
+    <div class="foot-links">
+      <a href="{{ github_url }}">{{ footer.github }}</a>
+      <a href="{{ github_readme_url }}">{{ footer.docs }}</a>
+      <a href="#features">{{ footer.features }}</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="{{ lightbox_close }}">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="/js/site.js"></script>
+</body>
+</html>

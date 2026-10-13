@@ -119,6 +119,30 @@ nav .wrap {
   }
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.lang-switch a,
+.lang-switch .lang-current {
+  color: var(--text-dim);
+  text-decoration: none;
+}
+
+.lang-switch a:hover {
+  color: var(--text);
+}
+
+.lang-switch .lang-current {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

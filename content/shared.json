@@ -1,0 +1,36 @@
+{
+  "languages": [
+    { "code": "en", "url": "/", "label": "EN" },
+    { "code": "fr", "url": "/fr/", "label": "FR" }
+  ],
+  "site_url": "https://astrolol.lol",
+  "github_url": "https://github.com/arisada/astrolol",
+  "github_install_url": "https://github.com/arisada/astrolol#install",
+  "github_readme_url": "https://github.com/arisada/astrolol#readme",
+
+  "slides": [
+    { "id": "target",      "src": "screenshots/target.png",      "w": 657,  "h": 747 },
+    { "id": "tasks",       "src": "screenshots/tasks.png",       "w": 758,  "h": 906 },
+    { "id": "platesolve",  "src": "screenshots/platesolve.png",  "w": 1252, "h": 940 },
+    { "id": "polar_align", "src": "screenshots/polar_align.png", "w": 1092, "h": 1064 },
+    { "id": "guider",      "src": "screenshots/guider.png",      "w": 827,  "h": 675 },
+    { "id": "journal",     "src": "screenshots/journal.png",     "w": 962,  "h": 1056 }
+  ],
+
+  "gallery": [
+    { "id": "mount",      "src": "screenshots/mount.png" },
+    { "id": "viewer",     "src": "screenshots/viewer.png" },
+    { "id": "mobile",     "src": "screenshots/mobile.jpeg" },
+    { "id": "profiles",   "src": "screenshots/profiles.png" },
+    { "id": "guider",     "src": "screenshots/guider.png" },
+    { "id": "journal",    "src": "screenshots/journal.png" },
+    { "id": "platesolve", "src": "screenshots/platesolve.png" },
+    { "id": "target",     "src": "screenshots/target.png" },
+    { "id": "tasks",      "src": "screenshots/tasks.png" }
+  ],
+
+  "plugin_chips": [
+    "autofocus", "phd2", "platesolve", "sequencer", "eqmod", "guide_simulator",
+    "object_resolver", "target", "lx200", "stellarium", "mdns", "system", "security"
+  ]
+}

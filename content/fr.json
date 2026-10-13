@@ -1,0 +1,92 @@
+{
+  "html_lang": "fr",
+
+  "meta": {
+    "title": "astrolol",
+    "description": "astrolol est une plateforme web gratuite et open source pour piloter votre télescope, caméra, monture et autoguidage depuis n'importe quel navigateur.",
+    "og_description": "Plateforme web gratuite et open source pour piloter votre télescope, caméra, monture et autoguidage depuis n'importe quel navigateur."
+  },
+
+  "nav": {
+    "features": "Fonctionnalités",
+    "plugins": "Extensions",
+    "screenshots": "Captures",
+    "get_started": "Démarrage",
+    "github": "GitHub"
+  },
+
+  "hero": {
+    "eyebrow": "Open source &middot; gratuit &middot; web",
+    "title_html": "Pilotez votre télescope<br>depuis n'importe quel navigateur.",
+    "lead": "astrolol est une plateforme de contrôle pour votre matériel d'astrophotographie. Elle tourne sur un petit ordinateur Linux et se pilote depuis un ordinateur, une tablette ou un téléphone sur votre réseau.",
+    "cta_primary": "Voir sur GitHub",
+    "cta_secondary": "Démarrer &rarr;"
+  },
+
+  "slides": {
+    "target":      { "label": "Recherche de cible",       "alt": "Page de recherche de cible montrant NGC 224, sa courbe de hauteur et son heure de passage au méridien" },
+    "tasks":       { "label": "Constructeur de tâches",   "alt": "Constructeur de tâches du séquenceur avec un plan multi-caméras pour NGC 7023" },
+    "platesolve":  { "label": "Résolution astrométrique", "alt": "Page de résolution astrométrique avec une image résolue, l'écart de pointage de la monture et le journal du solveur" },
+    "polar_align": { "label": "Alignement polaire",        "alt": "Réticule d'alignement polaire et assistant de résolution astrométrique" },
+    "guider":      { "label": "Guidage",                   "alt": "Vue de la caméra de guidage avec une étoile guide verrouillée et le graphique RMS en direct" },
+    "journal":     { "label": "Journal de session",        "alt": "Journal du séquenceur montrant la chronologie d'une session terminée et les images capturées" }
+  },
+
+  "features": {
+    "eyebrow": "Ce qu'il fait",
+    "title": "Tout ce qu'il faut au télescope, au même endroit.",
+    "lead": "Contrôle des équipements, imagerie, autoguidage et automatisation derrière un seul moteur événementiel, avec une vue en direct synchronisée sur tous les clients connectés.",
+    "cards": [
+      { "icon": "&#9881;",   "title": "Contrôle des équipements", "body": "astrolol mémorise les équipements (INDI ou pilotes natifs) de votre profil et les reconnecte automatiquement." },
+      { "icon": "&#128247;", "title": "Imagerie en parallèle",       "body": "astrolol permet de prendre des images avec plusieurs caméras à la fois, avec un dithering synchronisé." },
+      { "icon": "&#127919;", "title": "Autoguidage et résolution astrométrique", "body": "Autoguidage avec PHD2 ou le module de guidage intégré." },
+      { "icon": "&#128203;", "title": "Séquenceur",                  "body": "Planifiez une nuit complète : cible, pointage, centrage, guidage, dithering, retournement au méridien, avec récupération automatique des incidents courants." },
+      { "icon": "&#128268;", "title": "API REST",                     "body": "Toutes les fonctions sont accessibles via une API REST et WebSocket documentée, pas seulement depuis l'interface fournie &mdash; la seule plateforme de contrôle de télescope libre et gratuite conçue ainsi. Scriptez-la, ou construisez votre propre client." },
+      { "icon": "&#129513;", "title": "Extensions",                   "body": "astrolol repose entièrement sur une architecture à extensions, ce qui facilite son extension et l'ajout de nouvelles fonctions ou pilotes." }
+    ]
+  },
+
+  "start": {
+    "eyebrow": "Démarrage",
+    "title": "Trois étapes, et vous imagez.",
+    "steps": [
+      { "num": "01", "title": "Installez-le au télescope", "body": "Fonctionne sur un Raspberry Pi ou tout petit boîtier Linux fixé à la monture. 1 Go de RAM recommandé." },
+      { "num": "02", "title": "Connectez votre matériel",  "body": "astrolol communique nativement avec les pilotes INDI, et dispose d'un pilote natif pour Sky-Watcher EQMOD." },
+      { "num": "03", "title": "Ouvrez un navigateur",       "body": "Ouvrez astrolol depuis un navigateur ou votre téléphone." }
+    ],
+    "install_note": "L'installation dépend de votre matériel et de votre système.",
+    "install_cta": "Instructions d'installation &rarr;"
+  },
+
+  "gallery": {
+    "eyebrow": "Sur le terrain",
+    "title": "À quoi ressemble une session.",
+    "lead": "Le contrôle de vos équipements et vos images, où que vous vous connectiez.",
+    "items": {
+      "mount":      { "alt": "Page Monture affichant la position en direct, les coordonnées de la cible et les commandes de suivi",                  "caption": "Contrôle de la monture, position et suivi en direct" },
+      "viewer":     { "alt": "Page Visionneuse listant les sessions et images capturées, avec vignettes et tailles de fichiers",                      "caption": "Parcourez et gérez chaque image capturée" },
+      "mobile":     { "alt": "Page Imagerie d'astrolol ouverte dans le navigateur d'un téléphone, pilotant une pose",                              "caption": "Contrôle complet depuis votre téléphone, sans application" },
+      "profiles":   { "alt": "Page Profils montrant une arborescence d'équipement avec monture, tubes optiques, roue à filtres et caméras",        "caption": "Profils d'équipement, toute votre installation en arborescence" },
+      "guider":     { "alt": "Page Guidage montrant la vue de la caméra de guidage avec une étoile guide verrouillée et le graphique RMS en direct", "caption": "Autoguidage avec RMS en direct et verrouillage d'étoile" },
+      "journal":    { "alt": "Journal du séquenceur montrant la chronologie d'une session terminée et les images capturées",                        "caption": "Journal de session, l'historique complet de chaque exécution" },
+      "platesolve": { "alt": "Page de résolution astrométrique avec une image résolue, l'écart de pointage de la monture et le journal du solveur", "caption": "Résolution, synchronisation et repointage en une étape" },
+      "target":     { "alt": "Page de recherche de cible montrant NGC 224, sa courbe de hauteur et son heure de passage au méridien",                  "caption": "Recherche de cible avec lever, passage au méridien et coucher" },
+      "tasks":      { "alt": "Constructeur de tâches du séquenceur avec un plan multi-caméras pour NGC 7023",                                       "caption": "Construisez un plan d'imagerie multi-caméras" }
+    }
+  },
+
+  "plugins": {
+    "eyebrow": "Écosystème",
+    "title": "Étendez-le vous-même.",
+    "lead": "Toute fonctionnalité au-delà de la couche de base des équipements est une extension &mdash; avec sa propre API, sa propre page, activable par profil. Voici celles fournies avec astrolol aujourd'hui :"
+  },
+
+  "footer": {
+    "tagline": "contrôle de télescope open source.",
+    "github": "GitHub",
+    "docs": "Documentation",
+    "features": "Fonctionnalités"
+  },
+
+  "lightbox_close": "Fermer"
+}
